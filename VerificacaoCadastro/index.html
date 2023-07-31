@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro Usuario</title>
+</head>
+<script src="verificacao.js"></script>
+<body>
+    <form>
+        <div>
+            <label>Primeiro NOME</label>
+            <input type="text" id="name">
+            <label>Sobrenome</label>
+            <input type="text" id="sobre">
+            <label>Selecione o PÁIS</label>
+            <select id="sle">
+                <option selected>Selecionar</option>
+                <option value="bra">BRA</option>
+                <option value="eua">EUA</option>
+                <option value="fra">FRA</option>
+            </select>
+            <button onclick="verificacao()">Cadastrar</button><br>
+        </div>
+    </form>
+    <div id="resposta"></div>
+</body>
+</html>
