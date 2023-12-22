@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa</title>
+    <!-- CSS project -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Scripts JavaScript -->
+    <script src="js/scripts.js" defer></script> <!-- (defer) comando que faz os aruivos carregar apos o HTML -->
+</head>
+<body>
+    <div class="tarefa-container">
+        <header>
+            <h1>Tarefas</h1>
+        </header>
+
+        <!-- Adicionar a tarefa -->
+        <form id="tarefa-form">
+            <p>Adicione uma tarefa:</p>
+            <div class="form-control">
+                <input type="text" id="tarefa-input" placeholder="Oque você vai fazer">
+                <button type="submit">
+                    <i class="inconAdicionar"><img src="img/inconAdicionar.png" width="11"></i>
+                </button> <!-- tag <i> com a classe "fa-thin fa-plus" faz o incone + -->
+            </div>
+        </form>
+
+        <!-- Editar a tarefa -->
+        <form id="edit-form" class="hide">
+            <p>Edite a sua tarefa:</p>
+            <div class="form-control">
+                <input type="text" id="edit-input">
+                <button type="submit">
+                    <i class="inconEditar"><img src="img/inconEditar.png" width="11"></i>
+                </button>
+            </div>
+            <button id="cancel-edit-btn">Cancelar</button>
+        </form>
+
+        <!-- Pesquisar tarefa -->
+        <div id="toolbar">
+            <div id="search">
+                <h4>Pesquisar:</h4>
+                <form>
+                    <input type="text" id="search-input" placeholder="buscar">
+                    <button id="erase-button">
+                        <i class="inconDelete"><img src="img/incondelete.png" width="11"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- Filtrar tarefas -->
+            <div id="filter">
+                <h4>Filtrar:</h4>
+                <select id="filter-select">
+                    <option value="all">Todos</option>
+                    <option value="done">Feitas</option>
+                    <option value="tarefa">A fazer</option>
+                </select>
+            </div>
+        </div>
+        
+
+        <!-- Aonde fica as tarefas -->
+        <div class="tarefa-list" id="tarefa-list">
+            <div class="tarefa done">
+                <h3>Teste</h3>
+                <button class="finish-tarefa">
+                    <i class="check"><img src="img/inconFinalizar.png" width="11"></i>
+                </button>
+                <button class="edit-tarefa">
+                    <i class="pen"><img src="img/inconEditar.png" width="11"></i>
+                </button>
+                <button class="remove-tarefa">
+                    <i class="xmark"><img src="img/incondelete.png" width="11"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+/* GERAL */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* CORPO PROJECT */
+body{
+    background-image: url("../img/fundIsland2.jpg");
+    background-repeat: no-repeat, repeat-x;
+    background-position: top right, center;
+    background-size: cover;
+}
+
+button{
+    background-color: white;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+button:hover{
+    background-color: #102f5e;
+    color: white;
+}
+
+button:hover > i{
+    color: #FDFDFD;
+}
+
+button i{
+    color: #102f5e;
+    font-weight: bold;
+    pointer-events: none; /* desabilita as funções do botão quando clicar, ou seja ele só vai ser clicavel no JavaScript */
+}
+
+input, select {
+    padding: 0.25rem 0.5rem;
+}
+
+.hide{
+    display: none;
+}
+
+/* Tarefa Header */
+.tarefa-container{
+    max-width: 450px;
+    margin: 30rem auto;
+    background-color: #FDFDFD;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.tarefa-container header{
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Formulario */
+#tarefa-form, #edit-form{
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+#tarefa-form p, #edit-form p{
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.form-control{
+    display: flex;
+}
+
+.form-control input{
+    margin-right: .3rem;
+}
+
+#cancel-edit-btn{
+    margin-top: 1rem;
+}
+
+/* Tarefa Toolbar */
+#toolbar{
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+}
+
+#toolbar h4{
+    margin-bottom: .5rem;
+}
+
+#search{
+    border-right: 1px solid #ddd;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form{
+    display: flex;
+}
+
+#search input{
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select{
+    flex: 1;
+}
+
+/* Tarefa List */
+.tarefa{
+    display: flex;
+    justify-content: space-around; /* de um lado titulo de outro os botões */
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd; /* Divide cada uma das tarefas */
+    transition: 0.3s;
+}
+
+.tarefa h3{
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.tarefa button{
+    margin-left: 0.4rem;
+}
+
+.done{
+    background-color: #395169;
+}
+
+.done h3{
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic;
+}
